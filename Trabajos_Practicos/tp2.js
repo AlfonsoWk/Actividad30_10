@@ -134,6 +134,22 @@ Ejemplo:
 Input:  40773821 
 Output: ‘L’ */
 
+/* let letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+let dni;
+
+do {
+  dni = prompt('Ingrese un dni Valido');
+
+  if (dni) {
+    if (isNaN(dni)) {
+      alert('Ingrese un numero valido');
+    } else {
+      let posicion = dni % letras.length;
+      alert(letras[posicion]);
+    }
+  }
+} while (dni); */
+
 /* 6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
 
 1
@@ -193,7 +209,6 @@ if (num > 1 && num < 50) {
 
 /* let num = Number(prompt('Ingrese un número mayor a 1 y menor a 50'));
 
-// Verificar que el número esté en el rango permitido
 if (num > 1 && num < 50) {
     for (let i = 1; i <= num; i++) {
         let linea = '';
@@ -218,10 +233,26 @@ horizontal. Por ejemplo :
 ————————————————————-
 
 6
-7
+let i = 07
+
 8 (Múltiplo de 4)
 9 (Múltiplo de 9)
 10 */
+
+
+/* for (let i = 1; i <= 500; i++) {
+    let mensaje = `${i}`;
+
+    if (i % 4 === 0) {
+        mensaje += " es múltiplo de 4";
+    }
+    else if (i % 9 === 0) {
+        mensaje += " es múltiplo de 9";
+    }
+
+    console.log(mensaje);
+} */
+
 
 /* 10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número 
 consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
@@ -232,7 +263,7 @@ Ejercicios con Math */
 
 Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp */
 
-let nombres = [];
+/* let nombres = [];
 let edades = [];
 
 for (let i = 0; i < 3; i++) {
@@ -249,30 +280,91 @@ for (let i = 0; i < 3; i++) {
 }
 let posicionMaxima = edades.indexOf(Math.max(...edades));
 
-console.log(`La persona mayor es ${nombres[posicionMaxima]} con ${edades[posicionMaxima]} años.`);
+console.log(`La persona mayor es ${nombres[posicionMaxima]} con ${edades[posicionMaxima]} años.`); */
 
 
-/* 12- Realiza un script que genere un número aleatorio entre 1 y 99
+/* 12- Realiza un script que genere un número aleatorio entre 1 y 99 */
+
+/* let numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+console.log(`Número aleatorio: ${numeroAleatorio}`); */
 
 
-Ejercicios con String */
+/* Ejercicios con String */
 
 /* 13- Realiza un script que pida un texto y lo muestre en mayúsculas. */
+
+/* let texto = prompt('Introduce un texto');
+console.log(texto);
+
+let textoMayusculas = texto.toUpperCase();
+console.log(textoMayusculas) */
 
 /* 14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por 
 ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”. */
 
+/* let cadena = prompt('Introduce una frase');
+let resultado = '';
+
+for (let i = 0; i < cadena.length; i++) {
+    resultado += cadena[i];
+
+    if (i !== cadena.length - 1) {
+        resultado += '-';
+    }
+}
+
+console.log(resultado); */
+
+
 /* 15- Realiza un script que cuente el número de vocales que tiene un texto. */
+
+/* let texto = prompt('Introduce una palabra o frase');
+let cantidadVocales = 0;
+
+for (let i = 0; i < texto.length; i++) {
+    if ("aeiouAEIOU".includes(texto[i])) {
+        cantidadVocales += 1;
+    }
+}
+
+console.log(`Cantidad de vocales: ${cantidadVocales}`); */
+
 
 /* 16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá 
 mostrar “lat euq aloh”. */
+
+/* let cadenaTexto = prompt('Introduce una palabra o frase');
+console.log(cadenaTexto);
+
+let cadenaRevertida = cadenaTexto.split('').reverse().join('');
+
+console.log(cadenaRevertida); */
+
 
 /* 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
 Ejemplo:
 
-
-
 Input: Hola mundo
 
 Output: la vocal ‘o’ está en la posición 1 */
+
+/* let vocal = prompt('Introduce una palabra o frase');
+console.log(`Texto introducido: ${vocal}`);
+
+let posicionPrimeraVocal = -1;
+let primeraVocal = ''; 
+
+for (let i = 0; i < vocal.length; i++) {
+    if ("aeiouAEIOU".includes(vocal[i])) {
+        primeraVocal = vocal[i];
+        posicionPrimeraVocal = i + 1;
+        break; 
+    }
+}
+
+if (posicionPrimeraVocal !== -1) {
+    console.log(`La primera vocal en '${vocal}' es '${primeraVocal}' y está en la posición ${posicionPrimeraVocal}`);
+} else {
+    console.log(`No se encontraron vocales en '${vocal}'`);
+} */
